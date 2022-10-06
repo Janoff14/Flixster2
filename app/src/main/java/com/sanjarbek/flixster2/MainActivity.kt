@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                             val overview = movie.getString("overview")
                             val image = movie.getString("poster_path")
 
-
                             val title = if (movie.getString("media_type") == "tv"){
                                 movie.getString("original_name")
                             } else{
@@ -56,8 +55,8 @@ class MainActivity : AppCompatActivity() {
                             Log.d("second", "onCreate: $e")
                         }
 
-
-                    val actorModel = ActorModel(name,popularity,profile_path,movieModelArrayList)
+                    val actorModel = ActorModel(name,popularity,profile_path)
+                    actorModel.movieModelArrayList = movieModelArrayList
                     arrayListActorModel.add(actorModel)
                 }
             } catch (e: JSONException){

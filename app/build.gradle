@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.7.20"
+    id 'kotlin-parcelize'
 
 }
 
@@ -41,6 +43,9 @@ dependencies {
 
     //Volley
     implementation "com.android.volley:volley:1.2.1"
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+
+    //Serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
 
 
